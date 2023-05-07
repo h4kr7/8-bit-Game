@@ -1,4 +1,4 @@
-# 8-bit-Game
+# 8-bit-Game using pygame
 Block Game
 
 Develop a simple game using the following guidelines:-
