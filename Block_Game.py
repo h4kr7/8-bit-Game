@@ -1,4 +1,3 @@
-# 8 Bit Game
 import pygame
 import random
 
@@ -192,7 +191,6 @@ def game():
         # Display Exit on Screen
         display_screen.blit(exit,(width-60,height-475))
         display_screen.blit(score,(width-700,height-475))
-        # display_screen.blit(score_result,(width-600,height-475))
 
         # Update Display
         pygame.display.update()
@@ -207,7 +205,6 @@ def intro():
         for event in pygame.event.get():
             # Closed Window
             if event.type==pygame.QUIT:
-                # pygame.quit()
                 done = False
 
         # Initialise Mouse Pointer
