@@ -37,7 +37,7 @@ height = display_screen.get_height()
 
 # Game Over
 def game_over():
-    
+
     done = True
     while done:
         # Display Black Screen
@@ -57,7 +57,7 @@ def game_over():
                     if width-600 <= mouse1[0] <= width-600+140 and height-150 <= mouse1[1] <= height-150+40:
                         game()
                         done = False
-        
+
         # Insert Text/Button
         button_font = pygame.font.SysFont(None, 100)  # Font1
         button_font2 = pygame.font.SysFont("Times new Roman", 35)  # Font2
@@ -79,7 +79,7 @@ def game_over():
         else:
             pygame.draw.rect(display_screen,black,pygame.Rect(width-600,height-150,140,40))
             pygame.draw.rect(display_screen,black,pygame.Rect(width-200,height-150,140,40))
-        
+
         # Display Text on Screen
         display_screen.blit(gameover,(width-540,height-400))
         display_screen.blit(restart_button,(width-600,height-150))
@@ -97,14 +97,14 @@ def game():
     # object current co-ordinates
     x = 10
     y = 200
-    
+
     # velocity or speed of movement
     vel = 10
 
     # Opponent path
     x_path = 720
     y_path = random.randint(40,440)
-    
+
     # score box
     x_score = 720
     y_score = random.randint(40,440)
@@ -127,7 +127,7 @@ def game():
                 if width-70 <= mouse2[0] <= width-70+70 and height-480 <= mouse2[1] <= height-480+40:
                     pygame.quit()
                     done = False
-        
+
         # Initialise Mouse Pointer
         mouse2 = pygame.mouse.get_pos()
 
@@ -138,7 +138,7 @@ def game():
 
         # creates time delay of 10ms
         pygame.time.delay(10)
-        
+
         # player        
         # stores keys pressed
         keys = pygame.key.get_pressed()
@@ -184,16 +184,16 @@ def game():
         # After color Border
         if width-70 <= mouse2[0] <= width-70+70 and height-480 <= mouse2[1] <= height-480+40:
             pygame.draw.rect(display_screen,charcoal,pygame.Rect(width-70,height-480,70,40))
-        
+
         # Before color Border 
         else:
             pygame.draw.rect(display_screen,grey,pygame.Rect(width-70,height-480,70,40))
-        
+
         # Display Exit on Screen
         display_screen.blit(exit,(width-60,height-475))
         display_screen.blit(score,(width-700,height-475))
         # display_screen.blit(score_result,(width-600,height-475))
-        
+
         # Update Display
         pygame.display.update()
 
